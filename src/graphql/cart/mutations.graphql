@@ -1,0 +1,1018 @@
+mutation AddProductToCart($input: AddCartInput!) {
+  addCart(input: $input) {
+    id
+
+    currency
+    itemCount
+    itemTotal
+    total
+    state
+    merchandiseTotal
+    preTaxAmount
+    shipping
+    createdAt
+    specialInstructions
+    number
+    driverTipTotal
+    shipmentAdjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on DriverTip {
+          tipStyle
+          id
+          amount
+          __typename
+        }
+        __typename
+      }
+    }
+    charitableContributionTotal
+    shipmentTotal
+    insufficientStockLines {
+      quantity
+      product {
+        id
+        name
+        totalOnHand
+        __typename
+      }
+      __typename
+    }
+    adjustments {
+      source {
+        ... on CharitableContribution {
+          id
+          donation
+          __typename
+        }
+      }
+    }
+    payments {
+      id
+      state
+      source {
+        ... on CreditCard {
+          id
+          lastDigits
+          ccType
+        }
+      }
+    }
+
+    salesTax
+    shipments {
+      requestedDeliveryDate
+      deliverySlot {
+        id
+        displayTime
+      }
+    }
+    shipAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    billAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    lineItems {
+      id
+      price
+      quantity
+      product {
+        id
+        name
+
+        amount
+        currency
+        displayAmount
+        images {
+          id
+          thumbnail
+          altText
+          title
+        }
+      }
+    }
+  }
+}
+
+mutation AddCategoryToCart($input: AddCategoryInput!) {
+  addCategoryToCart(input: $input) {
+    id
+
+    currency
+    itemCount
+    itemTotal
+    total
+    state
+    merchandiseTotal
+    preTaxAmount
+    shipping
+    createdAt
+    specialInstructions
+    number
+    driverTipTotal
+    shipmentAdjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on DriverTip {
+          tipStyle
+          id
+          amount
+          __typename
+        }
+        __typename
+      }
+    }
+    charitableContributionTotal
+    shipmentTotal
+    insufficientStockLines {
+      quantity
+      product {
+        id
+        name
+        totalOnHand
+        __typename
+      }
+      __typename
+    }
+    adjustments {
+      source {
+        ... on CharitableContribution {
+          id
+          donation
+          __typename
+        }
+      }
+    }
+    payments {
+      id
+      state
+      source {
+        ... on CreditCard {
+          id
+          lastDigits
+          ccType
+        }
+      }
+    }
+
+    salesTax
+    shipments {
+      requestedDeliveryDate
+      deliverySlot {
+        id
+        displayTime
+      }
+    }
+    shipAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    billAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    lineItems {
+      id
+      price
+      quantity
+      product {
+        id
+        name
+
+        amount
+        currency
+        displayAmount
+        images {
+          id
+          thumbnail
+          altText
+          title
+        }
+      }
+    }
+  }
+}
+
+mutation UpdateProductInsideCart($input: UpdateProductToCartInput!) {
+  updateProductToCart(input: $input) {
+    id
+
+    currency
+    itemCount
+    itemTotal
+    total
+    state
+    merchandiseTotal
+    preTaxAmount
+    shipping
+    createdAt
+    specialInstructions
+    number
+    driverTipTotal
+    shipmentAdjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on DriverTip {
+          tipStyle
+          id
+          amount
+          __typename
+        }
+        __typename
+      }
+    }
+    charitableContributionTotal
+    shipmentTotal
+    insufficientStockLines {
+      quantity
+      product {
+        id
+        name
+        totalOnHand
+        __typename
+      }
+      __typename
+    }
+    adjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on CharitableContribution {
+          id
+          donation
+          __typename
+        }
+      }
+    }
+    payments {
+      id
+      state
+      source {
+        ... on CreditCard {
+          id
+          lastDigits
+          ccType
+        }
+      }
+    }
+
+    salesTax
+    shipments {
+      requestedDeliveryDate
+      deliverySlot {
+        id
+        displayTime
+      }
+    }
+    shipAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    billAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    lineItems {
+      id
+      price
+      quantity
+      product {
+        id
+        name
+
+        amount
+        currency
+        displayAmount
+        images {
+          id
+          thumbnail
+          altText
+          title
+        }
+      }
+
+      adjustments {
+        amount
+        id
+        eligible
+        label
+        source {
+          ... on PromotionAction {
+            id
+            promotion {
+              id
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+mutation AddCharitableContributionToCart($input: AddCharitableContributionToCartInput!) {
+  addCharitableContributionToCart(input: $input) {
+    id
+    itemCount
+    itemTotal
+    currency
+    total
+    merchandiseTotal
+    preTaxAmount
+    charitableContributionTotal
+    shipping
+    insufficientStockLines {
+      quantity
+      product {
+        id
+        name
+        totalOnHand
+        __typename
+      }
+      __typename
+    }
+    adjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on CharitableContribution {
+          id
+          donation
+          __typename
+        }
+      }
+    }
+    lineItems {
+      id
+      price
+      quantity
+      product {
+        id
+        name
+        amount
+        currency
+        displayAmount
+        images {
+          id
+          thumbnail
+          altText
+          title
+        }
+      }
+    }
+  }
+}
+
+mutation RemoveCharitableContributionFromCart($input: RemoveCharitableContributionFromCartInput!) {
+  removeCharitableContributionFromCart(input: $input) {
+    id
+    itemCount
+    itemTotal
+    currency
+    total
+    merchandiseTotal
+    preTaxAmount
+    charitableContributionTotal
+    shipping
+    insufficientStockLines {
+      quantity
+      product {
+        id
+        name
+        totalOnHand
+        __typename
+      }
+      __typename
+    }
+    adjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on CharitableContribution {
+          id
+          donation
+          __typename
+        }
+      }
+    }
+    lineItems {
+      id
+      price
+      quantity
+      product {
+        id
+        name
+        amount
+        currency
+        displayAmount
+        images {
+          id
+          thumbnail
+          altText
+          title
+        }
+      }
+    }
+  }
+}
+
+mutation UpdatePlaceOrder($input: UpdateInput!) {
+  checkoutUpdate(input: $input) {
+    id
+
+    total
+    state
+    merchandiseTotal
+    preTaxAmount
+    shipping
+    createdAt
+    specialInstructions
+    number
+    driverTipTotal
+    shipmentAdjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on DriverTip {
+          tipStyle
+          id
+          amount
+          __typename
+        }
+        __typename
+      }
+    }
+    charitableContributionTotal
+    shipmentTotal
+    insufficientStockLines {
+      quantity
+      product {
+        id
+        name
+        totalOnHand
+        __typename
+      }
+      __typename
+    }
+    adjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on CharitableContribution {
+          id
+          donation
+          __typename
+        }
+      }
+    }
+    payments {
+      id
+      state
+      source {
+        ... on CreditCard {
+          id
+          lastDigits
+          ccType
+        }
+      }
+    }
+
+    salesTax
+    shipments {
+      requestedDeliveryDate
+      deliverySlot {
+        id
+        displayTime
+      }
+    }
+    shipAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    billAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    lineItems {
+      id
+      price
+      quantity
+      product {
+        id
+        name
+
+        amount
+        currency
+        displayAmount
+        images {
+          id
+          thumbnail
+          altText
+          title
+        }
+      }
+    }
+  }
+}
+
+mutation NextPlaceOrder($input: NextInput!) {
+  checkoutNext(input: $input) {
+    id
+
+    total
+    state
+    merchandiseTotal
+    preTaxAmount
+    shipping
+    createdAt
+    specialInstructions
+    number
+    shipmentTotal
+    driverTipTotal
+    shipmentAdjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on DriverTip {
+          tipStyle
+          id
+          amount
+          __typename
+        }
+        __typename
+      }
+    }
+    charitableContributionTotal
+    insufficientStockLines {
+      quantity
+      product {
+        id
+        name
+        totalOnHand
+        __typename
+      }
+      __typename
+    }
+    adjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on CharitableContribution {
+          id
+          donation
+          __typename
+        }
+      }
+    }
+    payments {
+      id
+      source {
+        ... on CreditCard {
+          id
+          lastDigits
+          ccType
+        }
+      }
+      state
+    }
+
+    salesTax
+    shipments {
+      requestedDeliveryDate
+      deliverySlot {
+        id
+        displayTime
+      }
+    }
+    shipAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    billAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    lineItems {
+      id
+      price
+      quantity
+      product {
+        id
+        name
+
+        amount
+        currency
+        displayAmount
+        images {
+          id
+          thumbnail
+          altText
+          title
+        }
+      }
+    }
+  }
+}
+
+mutation CompletePlaceOrder($input: CompleteInput!) {
+  checkoutComplete(input: $input) {
+    id
+
+    total
+    state
+    merchandiseTotal
+    preTaxAmount
+    shipping
+    createdAt
+    specialInstructions
+    salesTax
+  }
+}
+
+mutation AddDriverTip($input: AddDriverTipInput!) {
+  checkoutAddDriverTip(input: $input) {
+    id
+
+    state
+    merchandiseTotal
+    preTaxAmount
+    shipping
+    createdAt
+    specialInstructions
+    salesTax
+  }
+}
+
+mutation AddPromoCode($input: AddPromoCodeInput!) {
+  addPromoCode(input: $input) {
+    id
+
+    total
+    state
+    merchandiseTotal
+    preTaxAmount
+    shipping
+    createdAt
+    specialInstructions
+    number
+    shipmentTotal
+    driverTipTotal
+    shipmentAdjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on DriverTip {
+          tipStyle
+          id
+          amount
+          __typename
+        }
+        __typename
+      }
+    }
+    charitableContributionTotal
+    insufficientStockLines {
+      quantity
+      product {
+        id
+        name
+        totalOnHand
+        __typename
+      }
+      __typename
+    }
+    adjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            code
+            id
+          }
+        }
+        ... on CharitableContribution {
+          id
+          donation
+          __typename
+        }
+      }
+    }
+    payments {
+      id
+      source {
+        ... on CreditCard {
+          id
+          lastDigits
+          ccType
+        }
+      }
+      state
+    }
+
+    salesTax
+    shipments {
+      requestedDeliveryDate
+      deliverySlot {
+        id
+        displayTime
+      }
+    }
+    shipAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    billAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    lineItems {
+      id
+      price
+      quantity
+      product {
+        id
+        name
+
+        amount
+        currency
+        displayAmount
+        images {
+          id
+          thumbnail
+          altText
+          title
+        }
+      }
+    }
+  }
+}
+
+mutation RemovePromoCode($input: RemovePromoCodeInput!) {
+  removePromoCode(input: $input) {
+    id
+
+    total
+    state
+    merchandiseTotal
+    preTaxAmount
+    shipping
+    createdAt
+    specialInstructions
+    number
+    shipmentTotal
+    driverTipTotal
+    shipmentAdjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on DriverTip {
+          tipStyle
+          id
+          amount
+          __typename
+        }
+        __typename
+      }
+    }
+    charitableContributionTotal
+    insufficientStockLines {
+      quantity
+      product {
+        id
+        name
+        totalOnHand
+        __typename
+      }
+      __typename
+    }
+    adjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            code
+            id
+          }
+        }
+        ... on CharitableContribution {
+          id
+          donation
+          __typename
+        }
+      }
+    }
+    payments {
+      id
+      source {
+        ... on CreditCard {
+          id
+          lastDigits
+          ccType
+        }
+      }
+      state
+    }
+
+    salesTax
+    shipments {
+      requestedDeliveryDate
+      deliverySlot {
+        id
+        displayTime
+      }
+    }
+    shipAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    billAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    lineItems {
+      id
+      price
+      quantity
+      product {
+        id
+        name
+
+        amount
+        currency
+        displayAmount
+        images {
+          id
+          thumbnail
+          altText
+          title
+        }
+      }
+    }
+  }
+}

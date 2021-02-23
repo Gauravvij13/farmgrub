@@ -1,0 +1,39 @@
+#
+# robots.txt
+#
+# This file is to prevent the crawling and indexing of certain parts
+# of your site by web crawlers and spiders run by sites like Yahoo!
+# and Google. By telling these "robots" where not to go on your site,
+# you save bandwidth and server resources.
+#
+# This file will be ignored unless it is at the root of your host:
+# Used:    http://example.com/robots.txt
+# Ignored: http://example.com/site/robots.txt
+#
+# For more information about the robots.txt standard, see:
+# http://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+# pages (Disallow)
+Disallow: /cart
+Disallow: /admin
+Disallow: /account
+
+# pages (Disallow)
+Allow: /shop/main
+Allow: /farms
+Allow: /mission
+Allow: /contact
+Allow: /quickdelivery
+Allow: /product-listing
+
+# directories (Disallow)
+Disallow: /admin/
+Disallow: /orders/
+Disallow: /graphiql/
+Disallow: /order-confirmed/
+
+# directories (Allow)
+Allow: /shop/
+Allow: /shop/t/
+Allow: /shop/products/

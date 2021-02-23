@@ -1,0 +1,8 @@
+query DriverTips {
+  driverTips {
+    id
+    title
+    tipStyle
+    amount
+  }
+}

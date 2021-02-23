@@ -1,0 +1,217 @@
+query Categories {
+  categories(maxDepth: 2) {
+    id
+    name
+    description
+    hasChildren
+    addProductsAllowed
+    promotionals {
+      id
+      image {
+        custom(maxHeight: 290, maxWidth: 290)
+        altText
+        title
+      }
+      targetUrl
+      newWindow
+    }
+    products(includeDescendants: true) {
+      id
+      name
+      amount
+      isAvailable
+      totalOnHand
+      productProperties {
+        id
+        value
+        property {
+          name
+          id
+        }
+      }
+      defaultVariant {
+        id
+        purchasable
+      }
+      images {
+        id
+        thumbnail
+        altText
+        title
+      }
+    }
+  }
+}
+
+query SimilarProducts($productId: ID!) {
+  similarProducts(productId: $productId) {
+    id
+    name
+    amount
+    isAvailable
+    productProperties {
+      id
+      value
+      property {
+        name
+        id
+      }
+    }
+    defaultVariant {
+      id
+      purchasable
+    }
+    images {
+      id
+      thumbnail
+      altText
+      title
+    }
+  }
+}
+
+query Category($categoryId: ID!, $limit: Int) {
+  category(id: $categoryId) {
+    id
+    name
+    description
+    permalink
+    metaTitle
+    metaDescription
+    addProductsAllowed
+    metaKeywords
+    hasChildren
+    promotionals {
+      id
+      image {
+        custom(maxHeight: 290, maxWidth: 290)
+        altText
+        title
+      }
+      targetUrl
+      newWindow
+    }
+    products(limit: $limit) {
+      id
+      name
+      amount
+      isAvailable
+      totalOnHand
+      productProperties {
+        id
+        value
+        property {
+          name
+          id
+        }
+      }
+      defaultVariant {
+        id
+        purchasable
+      }
+      images {
+        id
+        thumbnail
+        altText
+        title
+      }
+    }
+    descendants {
+      id
+      name
+      promotionals {
+        id
+        image {
+          custom(maxHeight: 290, maxWidth: 290)
+          altText
+          title
+        }
+        targetUrl
+        newWindow
+      }
+      hasChildren
+      products(limit: $limit) {
+        id
+        name
+        amount
+        isAvailable
+        productProperties {
+          id
+          value
+          property {
+            name
+            id
+          }
+        }
+        defaultVariant {
+          id
+          purchasable
+        }
+        images {
+          id
+          thumbnail
+          altText
+          title
+        }
+      }
+    }
+  }
+}
+
+query RootCategory {
+  rootCategory {
+    description
+    promotionals {
+      id
+      image {
+        custom(maxHeight: 290, maxWidth: 290)
+        altText
+        title
+      }
+      targetUrl
+      newWindow
+    }
+  }
+}
+
+query Product($id: ID!) {
+  product(id: $id) {
+    id
+    name
+    amount
+    description
+    metaTitle
+    metaDescription
+    metaKeywords
+    isAvailable
+    productProperties {
+      id
+      value
+      property {
+        name
+        id
+      }
+    }
+    defaultVariant {
+      id
+      purchasable
+    }
+    images {
+      id
+      url
+      altText
+      title
+    }
+    suppliers {
+      id
+      name
+      supportsLoyaltyCards
+      logo {
+        custom(maxHeight: 130, maxWidth: 200)
+        altText
+        title
+      }
+    }
+    totalOnHand
+  }
+}

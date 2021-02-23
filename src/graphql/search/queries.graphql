@@ -1,0 +1,24 @@
+query ProductSearch($query: String!, $limit: Int, $offset: Int) {
+  productSearch(query: $query, limit: $limit, offset: $offset) {
+    id
+    name
+    amount
+    description
+    isAvailable
+    variants {
+      optionValues {
+        presentation
+      }
+    }
+    defaultVariant {
+      id
+      purchasable
+    }
+    images {
+      id
+      thumbnail
+      altText
+      title
+    }
+  }
+}

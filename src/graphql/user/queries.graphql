@@ -1,0 +1,64 @@
+query UserDetails {
+  me {
+    id
+    firstName
+    lastName
+    email
+    phoneNo
+    addresses {
+      address1
+      city
+      id
+      phone
+      zipcode
+    }
+    billAddress {
+      address1
+      city
+      id
+      phone
+      zipcode
+    }
+    shipAddress {
+      address1
+      city
+      id
+      phone
+      zipcode
+    }
+    loyaltyCards {
+      id
+      supplier {
+        id
+        name
+        logo {
+          custom(maxHeight: 100, maxWidth: 100)
+          altText
+          title
+        }
+      }
+      cardNumber
+    }
+    cartSaved
+    defaultCreditCard {
+      lastDigits
+      ccType
+      id
+    }
+  }
+}
+
+query StockNotifications {
+  me {
+    id
+    pendingStockNotifications {
+      id
+      variant {
+        id
+        product {
+          id
+        }
+      }
+    }
+  }
+}

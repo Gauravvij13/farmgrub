@@ -1,0 +1,336 @@
+query CartCount {
+  cart {
+    id
+    itemCount
+    itemTotal
+    total
+  }
+}
+
+query CartView {
+  cart {
+    id
+    itemCount
+    itemTotal
+    currency
+    total
+    state
+    merchandiseTotal
+    preTaxAmount
+    charitableContributionTotal
+    shipping
+    createdAt
+    salesTax
+    shipmentTotal
+    insufficientStockLines {
+      quantity
+      product {
+        id
+        name
+        totalOnHand
+        __typename
+      }
+      __typename
+    }
+    shipmentAdjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on DriverTip {
+          tipStyle
+          id
+          amount
+          __typename
+        }
+        __typename
+      }
+    }
+    adjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on CharitableContribution {
+          id
+          donation
+          __typename
+        }
+      }
+    }
+
+    specialInstructions
+    driverTipTotal
+    payments {
+      id
+      state
+      source {
+        ... on CreditCard {
+          id
+          lastDigits
+          ccType
+        }
+      }
+    }
+
+    shipments {
+      requestedDeliveryDate
+      deliverySlot {
+        id
+        displayTime
+      }
+    }
+    shipAddress {
+      address1
+      phone
+      city
+      zipcode
+    }
+    billAddress {
+      address1
+      phone
+      city
+      zipcode
+    }
+    lineItems {
+      id
+      price
+      quantity
+      product {
+        id
+        name
+        totalOnHand
+
+        amount
+        currency
+        displayAmount
+        productProperties {
+          id
+          value
+          property {
+            id
+            name
+          }
+        }
+        images {
+          id
+          thumbnail
+          altText
+          title
+        }
+      }
+      adjustments {
+        amount
+        id
+        eligible
+        label
+        source {
+          ... on PromotionAction {
+            id
+            promotion {
+              id
+              name
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+query DeliverySlots {
+  shipmentMethod {
+    id
+    name
+    interrimHolidays
+    deliveryToday {
+      date
+      deliverySlots {
+        displayTime
+        id
+        shippingMethod {
+          calculator {
+            deliveryFee
+            preferences
+          }
+        }
+      }
+      displayTitle
+    }
+    deliveryTomorrow {
+      date
+      deliverySlots {
+        displayTime
+        id
+        shippingMethod {
+          calculator {
+            deliveryFee
+            preferences
+          }
+        }
+      }
+      displayTitle
+    }
+    calculator {
+      deliveryFee
+    }
+  }
+}
+
+query CharitableContributions {
+  charitableContributions {
+    charity {
+      id
+      name
+      logo {
+        thumbnail
+        title
+        altText
+      }
+    }
+    id
+    description
+    fullDescription
+  }
+}
+
+query OrderList {
+  orderList {
+    id
+    total
+    state
+    createdAt
+    completedAt
+    number
+    shipments {
+      requestedDeliveryDate
+    }
+  }
+}
+
+query Order($id: ID!) {
+  order(id: $id) {
+    id
+    total
+    state
+    merchandiseTotal
+    preTaxAmount
+    shipping
+    createdAt
+    specialInstructions
+    number
+    driverTipTotal
+    shipmentAdjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on DriverTip {
+          tipStyle
+          id
+          amount
+          __typename
+        }
+        __typename
+      }
+    }
+    adjustments {
+      amount
+      id
+      eligible
+      source {
+        ... on PromotionAction {
+          id
+          promotion {
+            name
+            code
+            id
+          }
+        }
+        ... on CharitableContribution {
+          id
+          donation
+          __typename
+        }
+      }
+    }
+    charitableContributionTotal
+    payments {
+      id
+      state
+      source {
+        ... on CreditCard {
+          id
+          lastDigits
+          ccType
+        }
+      }
+    }
+
+    salesTax
+    shipments {
+      requestedDeliveryDate
+      deliverySlot {
+        id
+        displayTime
+      }
+    }
+    shipAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    billAddress {
+      address1
+      address2
+      phone
+      city
+      zipcode
+    }
+    lineItems {
+      id
+      price
+      quantity
+      product {
+        id
+        name
+
+        amount
+        currency
+        displayAmount
+        images {
+          id
+          thumbnail
+          altText
+          title
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="28px" height="28px" viewBox="0 0 28 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group 3</title>
+    <g id="consumer-views" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="FG_home-browse-Copy" transform="translate(-330.000000, -26.000000)">
+            <g id="Group-3" transform="translate(330.000000, 28.000000)">
+                <path d="M1,13 L27,13 L23.4344087,24.5881717 C23.1761985,25.4273549 22.4008604,26 21.5228507,26 L6.47714931,26 C5.5991396,26 4.82380152,25.4273549 4.56559129,24.5881717 L1,13 L1,13 Z" id="Rectangle" fill="#662200"></path>
+                <polygon id="Path-7" fill="#FFFFFF" points="5 15 8 15 8 18 5 18"></polygon>
+                <polygon id="Path-7-Copy" fill="#FFFFFF" points="15 15 18 15 18 18 15 18"></polygon>
+                <polygon id="Path-7-Copy-2" fill="#FFFFFF" points="10 15 13 15 13 18 10 18"></polygon>
+                <polygon id="Path-7-Copy-5" fill="#FFFFFF" points="15 20 18 20 18 23 15 23"></polygon>
+                <polygon id="Path-7-Copy-7" fill="#FFFFFF" points="20 20 23 20 22 23 20 23"></polygon>
+                <polygon id="Path-7-Copy-4" fill="#FFFFFF" points="10 20 13 20 13 23 10 23"></polygon>
+                <polygon id="Path-7-Copy-6" fill="#FFFFFF" points="5 20 8 20 8 23 6 23"></polygon>
+                <polygon id="Path-7-Copy-3" fill="#FFFFFF" points="20 15 23 15 23 18 20 18"></polygon>
+                <rect id="Rectangle" fill="#88CC55" x="0" y="8" width="28" height="4" rx="1"></rect>
+                <path d="M13,3.5 L3,3.5 C2.58578644,3.5 2.21078644,3.66789322 1.93933983,3.93933983 C1.66789322,4.21078644 1.5,4.58578644 1.5,5 L1.5,6 C1.5,6.41421356 1.66789322,6.78921356 1.93933983,7.06066017 C2.21078644,7.33210678 2.58578644,7.5 3,7.5 L13,7.5 C13.4142136,7.5 13.7892136,7.33210678 14.0606602,7.06066017 C14.3321068,6.78921356 14.5,6.41421356 14.5,6 L14.5,5 C14.5,4.58578644 14.3321068,4.21078644 14.0606602,3.93933983 C13.7892136,3.66789322 13.4142136,3.5 13,3.5 Z" id="Rectangle" stroke="#FFFFFF" fill="#551100" transform="translate(8.000000, 5.500000) rotate(-45.000000) translate(-8.000000, -5.500000) "></path>
+                <path d="M25,3.5 L15,3.5 C14.5857864,3.5 14.2107864,3.66789322 13.9393398,3.93933983 C13.6678932,4.21078644 13.5,4.58578644 13.5,5 L13.5,6 C13.5,6.41421356 13.6678932,6.78921356 13.9393398,7.06066017 C14.2107864,7.33210678 14.5857864,7.5 15,7.5 L25,7.5 C25.4142136,7.5 25.7892136,7.33210678 26.0606602,7.06066017 C26.3321068,6.78921356 26.5,6.41421356 26.5,6 L26.5,5 C26.5,4.58578644 26.3321068,4.21078644 26.0606602,3.93933983 C25.7892136,3.66789322 25.4142136,3.5 25,3.5 Z" id="Rectangle-Copy-2" stroke="#FFFFFF" fill="#551100" transform="translate(20.000000, 5.500000) scale(-1, 1) rotate(-45.000000) translate(-20.000000, -5.500000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

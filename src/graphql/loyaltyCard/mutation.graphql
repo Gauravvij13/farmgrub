@@ -1,0 +1,66 @@
+mutation AddLoyaltyCard($input: CreateLoyaltyCardInput!) {
+  addLoyaltyCard(input: $input) {
+    cardNumber
+    id
+    supplier {
+      name
+      logo {
+        custom(maxHeight: 100, maxWidth: 100)
+        title
+        altText
+      }
+    }
+    user {
+      id
+      loyaltyCards {
+        id
+        supplier {
+          id
+          name
+          logo {
+            custom(maxHeight: 100, maxWidth: 100)
+            altText
+            title
+          }
+        }
+        cardNumber
+      }
+    }
+  }
+}
+
+mutation UpdateLoyaltyCard($input: UpdateLoyaltyCardInput!) {
+  updateLoyaltyCard(input: $input) {
+    cardNumber
+    id
+    supplier {
+      id
+      name
+      logo {
+        custom(maxHeight: 100, maxWidth: 100)
+        altText
+        title
+      }
+    }
+    user {
+      id
+      loyaltyCards {
+        id
+        supplier {
+          id
+          name
+          logo {
+            custom(maxHeight: 100, maxWidth: 100)
+            altText
+            title
+          }
+        }
+        cardNumber
+      }
+    }
+  }
+}
+
+mutation RemoveLoyaltyCard($input: DestroyLoyaltyCardInput!) {
+  removeLoyaltyCard(input: $input)
+}

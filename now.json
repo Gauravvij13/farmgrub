@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "public": true,
+  "build": {
+    "env": {
+      "REACT_APP_TARGET_NAME": "staging",
+      "REACT_APP_IS_PRODUCTION": "false",
+      "REACT_APP_API_HOST": "https://staging.farmgrub.com/graphql",
+      "REACT_APP_GOOGLE_API_KEY": "EXAMPLEKEY",
+      "REACT_APP_STRIPE_KEY": "pk_test_DpIEjJlFmI5m711zVXHGJbpu002kHaZ6m3",
+      "REACT_APP_FIREBASE_APIKEY": "AIzaSyB2qhgTSvaF_rwJZlvPSQ-qJtAsHaaiBhY",
+      "REACT_APP_FIREBASE_AUTHDOMAIN": "farmgrub-00.firebaseapp.com",
+      "REACT_APP_FIREBASE_DATABASEURL": "https://farmgrub-00.firebaseio.com",
+      "REACT_APP_FIREBASE_PROJECTID": "farmgrub-00",
+      "REACT_APP_FIREBASE_STORAGEBUCKET": "farmgrub-00.appspot.com",
+      "REACT_APP_FIREBASE_MESSAGINGSENDERID": "981322552836",
+      "REACT_APP_FIREBASE_APPID": "1:981322552836:web:bf498c15ea40f142018751",
+      "REACT_APP_FIREBASE_MEASUREMENTID": "G-H54DE1B116",
+      "REACT_APP_LOGROCKET_KEY": "coeg3s/farmgrub"
+    }
+  },
+  "env": {
+    "REACT_APP_TARGET_NAME": "staging",
+    "REACT_APP_IS_PRODUCTION": "false",
+    "REACT_APP_API_HOST": "https://staging.farmgrub.com/graphql",
+    "REACT_APP_GOOGLE_API_KEY": "EXAMPLEKEY",
+    "REACT_APP_STRIPE_KEY": "pk_test_DpIEjJlFmI5m711zVXHGJbpu002kHaZ6m3",
+    "REACT_APP_FIREBASE_APIKEY": "AIzaSyB2qhgTSvaF_rwJZlvPSQ-qJtAsHaaiBhY",
+    "REACT_APP_FIREBASE_AUTHDOMAIN": "farmgrub-00.firebaseapp.com",
+    "REACT_APP_FIREBASE_DATABASEURL": "https://farmgrub-00.firebaseio.com",
+    "REACT_APP_FIREBASE_PROJECTID": "farmgrub-00",
+    "REACT_APP_FIREBASE_STORAGEBUCKET": "farmgrub-00.appspot.com",
+    "REACT_APP_FIREBASE_MESSAGINGSENDERID": "981322552836",
+    "REACT_APP_FIREBASE_APPID": "1:981322552836:web:bf498c15ea40f142018751",
+    "REACT_APP_FIREBASE_MEASUREMENTID": "G-H54DE1B116",
+    "REACT_APP_LOGROCKET_KEY": "coeg3s/farmgrub"
+  }
+}

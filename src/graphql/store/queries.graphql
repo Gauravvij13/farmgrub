@@ -1,0 +1,9 @@
+query Store {
+  store {
+    name
+    id
+    phone
+    facebook
+    instagram
+  }
+}

@@ -1,0 +1,16 @@
+overwrite: true
+schema: 'https://staging.farmgrub.com/graphql'
+documents: 'src/graphql/**/*.graphql'
+generates:
+  src/generated/introspection-result.ts:
+    plugins:
+      - 'fragment-matcher'
+  src/generated/graphql-hooks.ts:
+    plugins:
+      - 'typescript'
+      - 'typescript-operations'
+      - 'typescript-react-apollo'
+    config:
+      withHOC: false
+      withComponent: false
+      withHooks: true

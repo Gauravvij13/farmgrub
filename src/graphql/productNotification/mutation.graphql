@@ -1,0 +1,15 @@
+mutation CreateStockNotification($input: CreateStockNotificationInput!) {
+  createStockNotification(input: $input) {
+    id
+    variant {
+      id
+      product {
+        id
+      }
+    }
+  }
+}
+
+mutation RemoveStockNotification($input: DestroyStockNotificationInput!) {
+  removeStockNotification(input: $input)
+}

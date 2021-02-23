@@ -1,0 +1,58 @@
+query Suppliers {
+  suppliers {
+    id
+    city
+    description
+    websiteName
+    websiteUrl
+    masterSupplier
+    supportsLoyaltyCards
+    name
+    state {
+      id
+      abbr
+    }
+    images {
+      id
+      url
+      altText
+      title
+    }
+    categories {
+      id
+      name
+    }
+  }
+}
+
+query Supplier($id: ID!) {
+  supplier(id: $id) {
+    id
+    city
+    description
+    websiteName
+    websiteUrl
+    supportsLoyaltyCards
+    name
+    supportsLoyaltyCards
+    logo {
+      url
+      altText
+      title
+    }
+    state {
+      id
+      abbr
+    }
+    images {
+      id
+      url
+      altText
+      title
+    }
+    products {
+      id
+      name
+    }
+  }
+}

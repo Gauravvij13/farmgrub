@@ -1,0 +1,17 @@
+query ActiveQuickDelivery {
+  activeQuickDelivery {
+    contactInfo
+    details
+    id
+    phone
+    email
+    shippingMethod {
+      deliverySlots {
+        id
+        displayActualTime
+      }
+    }
+    subtitle
+    title
+  }
+}

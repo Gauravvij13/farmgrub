@@ -1,0 +1,14 @@
+mutation UpdateUser($input: UpdateUserInput!) {
+  updateUser(input: $input) {
+    id
+    firstName
+    lastName
+    phoneNo
+  }
+}
+
+mutation ChangePassword($input: ChangePasswordInput!) {
+  changePassword(input: $input) {
+    changed
+  }
+}
